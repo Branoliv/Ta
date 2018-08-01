@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{nomeLista}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let lista of listas">
+
+    <ion-item (click)="opeLista(lista)">
+      <ion-item>
+        <div item-start>
+          <h2>{{lista.titulo}}</h2>
+        </div>
+        
+        <div item-end>
+          <p *ngIf="lista.status == 0">
+            <b>Ativa</b>
+          </p>
+          <p *ngIf="lista.status == 1">
+            <b>Em andamento</b>
+          </p>
+          <p *ngIf="lista.status == 2">
+            <b>Finalizada</b>
+          </p>
+
+        </div>
+      </ion-item>
+ 
+      <ion-item>
+        <div item-start>
+          <p stacked>Início</p>
+          <p ng-controller="datCtrl">{{lista.dataInicio | date:"dd/MM/yyyy"}}</p>
+        </div>
+        <div item-end>
+          <p stacked>Conclusão</p>
+          <p ng-controller="datCtrl">{{lista.dataConclusao | date:"dd/MM/yyyy"}}</p>
+        </div>
+      </ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>

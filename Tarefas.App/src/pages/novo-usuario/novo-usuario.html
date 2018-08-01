@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Novo Usuário</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <form [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Primeiro nome</ion-label>
+        <ion-input type="text" formControlName="primeiroNome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Ultimo nome</ion-label>
+        <ion-input type="text" formControlName="ultimoNome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="senha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Logradouro</ion-label>
+        <ion-input type="text" formControlName="logradouro"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Número</ion-label>
+        <ion-input type="text" formControlName="numeroResid"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Bairro</ion-label>
+        <ion-input type="text" formControlName="bairro"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Cidade</ion-label>
+        <ion-input type="text" formControlName="cidade"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Estado</ion-label>
+        <ion-input type="text" formControlName="estado"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Pais</ion-label>
+        <ion-input type="text" formControlName="pais"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Cep</ion-label>
+        <ion-input type="text" formControlName="cep"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button color="primary" outline block round [disabled]="!form.valid" (click)="salvar()">Salvar</button>
+    <button ion-button color="secondary" outline block round  (click)="cancelar()">Cancelar</button>
+
+  </form>
+</ion-content>

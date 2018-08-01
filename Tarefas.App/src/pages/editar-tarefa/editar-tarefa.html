@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Editar Tarefa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-input type="text" [(ngModel)]="tarefas.titulo" formControlName="titulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input type="text" [(ngModel)]="tarefas.descricao" formControlName="descricao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data ínicio</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="tarefas.dataInicio" formControlName="dataInicio"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data conclusão</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="tarefas.dataConclusao" formControlName="dataConclusao"></ion-datetime>
+      </ion-item>
+
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label floating>Lista de tarefas</ion-label>
+          <ion-select formControlName="idListaDeTarefas" [(ngModel)]="tarefas.idListaDeTarefas">
+            <ion-option *ngFor="let lista of listas" value="{{lista.id}}">{{lista.nome}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item-options side="rigth">
+          <button ion-button color="primary" (click)="showAddListaDeTarefas()">
+            Novo
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+      <ion-item>
+        <ion-label floating>Status</ion-label>
+        <ion-select formControlName="status" [(ngModel)]="tarefas.status">
+          <!-- <ion-option *ngFor="let st of status" value="{{st}}">{{st}}</ion-option> -->
+          <ion-option value="0">Ativa</ion-option>
+          <ion-option value="1">Em andamento</ion-option>
+          <ion-option value="2">Finalizada</ion-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+  </form>
+  <button ion-button color="primary" outline block round [disabled]="!form.valid" (click)="salvar()">Salvar</button>
+  <button ion-button color="secondary" outline block round (click)="cancelar">Cancelar</button>
+  <button ion-button color="danger" outline block round (click)="excluir(tarefas)">Excluir</button>
+</ion-content>

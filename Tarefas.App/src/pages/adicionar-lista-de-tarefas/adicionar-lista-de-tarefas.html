@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nova lista de tarefas</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let lista of listas" (click)="showListaDeTarefas(lista)">
+    <ion-item>
+      <h2>{{lista.nome}}</h2>
+
+      <ion-icon name="md-trash" clear item-end (click)="excluir(lista)"></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="adicionar()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

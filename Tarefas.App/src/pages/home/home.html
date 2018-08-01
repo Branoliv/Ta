@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <ion-label (click)="loadTarefa()">{{usuario}}</ion-label>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="fecharApp()">
+        <ion-icon name="exit"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let tarefa of tarefas" (click)="showEtidarTarefa(tarefa)">
+
+    <ion-card-header>
+      <p *ngIf="tarefa.status == 0">
+        <b>{{tarefa.titulo}}</b> - Ativa
+      </p>
+      <p *ngIf="tarefa.status == 1">
+        <b>{{tarefa.titulo}}</b> - Em andamento
+      </p>
+      <p *ngIf="tarefa.status == 2">
+        <b>{{tarefa.titulo}}</b> - Finalizada
+      </p>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-row id="data">
+        <ion-col>
+          <ion-item>
+            <ion-label stacked>Início</ion-label>
+            <ion-label ng-controller="datCtrl">{{tarefa.dataInicio | date:"dd/MM/yyyy"}}</ion-label>
+            <!-- <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="tarefa.dataInicio"></ion-datetime> -->
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label stacked>Conclusão</ion-label>
+            <ion-label ng-controller="datCtrl">{{tarefa.dataConclusao | date:"dd/MM/yyyy"}}</ion-label>
+            <!-- <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="tarefa.dataConclusao"></ion-datetime> -->
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="showNovaTarefa()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <!-- <button ion-button secondary menuToggle>Toggle Menu</button> -->
+
+</ion-content>

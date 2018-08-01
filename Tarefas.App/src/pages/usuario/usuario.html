@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Usuário</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding disabled="true">
+  <form [formGroup]="form">
+
+    <img src="assets/imgs/login-icon.png" alt="logo">
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label stacked>Primeiro nome</ion-label>
+        <ion-label>{{usuario.primeiroNome}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Ultimo nome</ion-label>
+        <ion-label>{{usuario.ultimoNome}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>E-mail</ion-label>
+        <ion-label>{{usuario.email}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Logradouro</ion-label>
+        <ion-label>{{usuario.logradouro}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Número</ion-label>
+        <ion-label>{{usuario.numeroResid}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Bairro</ion-label>
+        <ion-label>{{usuario.bairro}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Cidade</ion-label>
+        <ion-label>{{usuario.cidade}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Estado</ion-label>
+        <ion-label>{{usuario.estado}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Pais</ion-label>
+        <ion-label>{{usuario.pais}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Cep</ion-label>
+        <ion-label>{{usuario.cep}}</ion-label>
+      </ion-item>
+
+    </ion-list>
+
+    <button ion-button color="primary" block round (click)="editar()">Editar</button>
+
+  </form>
+</ion-content>

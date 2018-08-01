@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nova Tarefa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form">
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Título</ion-label>
+        <ion-input type="text" formControlName="titulo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Descrição</ion-label>
+        <ion-input type="text" formControlName="descricao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data ínicio</ion-label>
+        <ion-input type="date"  formControlName="dataInicio"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Data conclusão</ion-label>
+        <ion-input type="date"  formControlName="dataConclusao"></ion-input>
+      </ion-item>
+
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label floating>Lista de tarefas</ion-label>
+          <ion-select formControlName="idListaDeTarefas" [(ngModel)]="listaDeTarefasSelecionada">
+            <ion-option *ngFor="let lista of listas" value="{{lista.id}}">{{lista.nome}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item-options side="rigth">
+          <button ion-button color="primary" (click)="showAddListaDeTarefas()">
+            Novo
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+  </form>
+  <button ion-button color="primary" outline block round [disabled]="!form.valid" (click)="salvar()">Salvar</button>
+  <button ion-button color="secondary" outline block round (click)="cancelar()">Cancelar</button>
+</ion-content>

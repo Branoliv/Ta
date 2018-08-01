@@ -1,0 +1,83 @@
+[33mcommit 1cff7ed9b1b3ed329b3fc2e718b01e2965537e2e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 31 21:31:19 2018 -0300
+
+    Inicial github
+
+[33mcommit 6d51f152cfe29501e53f3681d426b14d210858d9[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 31 19:44:53 2018 -0300
+
+    retorno commit valido refresh pagehome
+
+[33mcommit 2bb0de69dd967224f3674998ba60b0a29a474eaa[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 31 19:38:00 2018 -0300
+
+    erro server 500
+
+[33mcommit bee80c5ff38bfe364b38553b1c74c4062bef8130[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Sat Jul 28 19:17:22 2018 -0300
+
+    adicionado refresh na page home
+
+[33mcommit ddc7da4720cf990c245a7aa68ce8d955c4c3f3d4[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Wed Jul 25 22:12:06 2018 -0300
+
+    Atualização do perfil de usuário
+
+[33mcommit 25be6ae6eb81d96e27853a915adc73e7ef5ae2f9[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Wed Jul 25 00:22:09 2018 -0300
+
+    Adicionar view usuário
+
+[33mcommit 7f21415fb6f94f13768ba82311763f6cdc3c6c1d[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 24 22:29:13 2018 -0300
+
+    Migration Endereço
+
+[33mcommit f1f3d14a9b6abf5877f0002b9f8ecbd8a531b0fe[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 24 22:12:57 2018 -0300
+
+    auterado objeto de valor endreço
+
+[33mcommit 2c2a72075fda39196970ff20b77fb1459f4b37d5[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Tue Jul 24 22:03:57 2018 -0300
+
+    Adicionar objeto de valor endereço para usuario
+
+[33mcommit a3d5e6e4d94816092a5e5c15972527ac4c26060b[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Sun Jul 22 16:29:38 2018 -0300
+
+    ajuste dois, botão cadastrar tela login
+
+[33mcommit 5757bde94157004d329a4bcd3d3ab9311d45a1dd[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Sun Jul 22 16:24:32 2018 -0300
+
+    ajustando botão cadastrar tela login
+
+[33mcommit e4e80651a42deb12fb6e98e1707acfb8ee0e92ff[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Sun Jul 22 15:45:32 2018 -0300
+
+    menu desativado na tela de login
+
+[33mcommit 48cbeedc9c6c5a4cebd8a654dedfd7666889a983[m
+Author: Cleber Brandão <cleber_brandao@hotmail.com>
+Date:   Sun Jul 22 15:22:42 2018 -0300
+
+    apagando conexão db azure
+
+[33mcommit 8adc2335d37c787f540f0bf38f4cec7b5a80e60c[m
+Author: Cleber Brandão <cleber_brandao@hotmail.comgit config --global user.email cleber_brandao@hotmail.comclsexitgit config --global user.email cleber_brandao@hotmail.com>
+Date:   Sun Jul 22 14:53:29 2018 -0300
+
+    Projeto inical, api rodando no server e dispositivo

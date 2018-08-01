@@ -1,0 +1,31 @@
+page-home {
+    #data{
+        height: 85px;
+        width: 100%;
+        text-align: left;
+        
+    }
+
+       .card,.card-header{
+        border:  1px 1px 1px 1px ;
+        padding: 0px 0px 0px 0px ;
+        margin: 8px ;
+        //background-color: blueviolet;
+        
+    }
+
+    .item{
+        align-self: auto;
+        padding-block-start: 0%;
+        border:  0;
+        margin: 0;
+    }
+
+    .row{
+        border:  0;
+        padding: 0;
+       // background-color: aqua;
+        align-self: inherit;
+    }
+}
+
